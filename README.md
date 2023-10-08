@@ -10,7 +10,7 @@ https://qiita.com/miumi/items/6a70d5b9a1a61cc39dc8
 git clone https://github.com/mikaijun/go-postgre-onboarding.git
 ```
 
-## 2: VSCodeを開き。左下の青部分をクリック
+## 2: VSCodeを開き、左下の青部分をクリック
 ![スクリーンショット 2023-10-09 8 27 45](https://github.com/mikaijun/go-postgre-onboarding/assets/74134232/79c1b98c-4688-42e3-a063-1e24b8765728)
 
 ## 3: 「コンテナーで再度開く」をクリック
