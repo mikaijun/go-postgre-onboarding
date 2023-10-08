@@ -1,5 +1,7 @@
 # このリポジトリに関して
-(後で書く)
+下記解説記事で作成したリポジトリになります
+
+https://qiita.com/miumi/items/6a70d5b9a1a61cc39dc8
 
 # 手順
 
@@ -8,15 +10,13 @@
 git clone https://github.com/mikaijun/go-postgre-onboarding.git
 ```
 
-## 2: VSCodeでcloneしたファイルを開く
-
-## 3: 左下の青部分をクリック
+## 2: VSCodeを開き。左下の青部分をクリック
 ![スクリーンショット 2023-10-09 8 27 45](https://github.com/mikaijun/go-postgre-onboarding/assets/74134232/79c1b98c-4688-42e3-a063-1e24b8765728)
 
-## 4: 「コンテナーで再度開く」をクリック
+## 3: 「コンテナーで再度開く」をクリック
 ![スクリーンショット 2023-10-09 8 27 58](https://github.com/mikaijun/go-postgre-onboarding/assets/74134232/1ceb9598-d3e7-4ae0-b514-8648d90b79c0)
 
-## 5: 動作確認
+## 4: 動作確認
 
 ![スクリーンショット 2023-10-09 8 37 31](https://github.com/mikaijun/go-postgre-onboarding/assets/74134232/b19ec492-82e2-4113-9b99-cc8fcc46c13d)
 
