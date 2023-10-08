@@ -6,31 +6,24 @@ import (
 	"net/http"
 	"os"
 
+	"example.com/m/api"
+	"example.com/m/migrations"
 	_ "github.com/lib/pq"
 )
 
-var db *sql.DB
+func main() {
+	host := os.Getenv("POSTGRES_HOSTNAME")
+	database := os.Getenv("POSTGRES_DB")
+	user := os.Getenv("POSTGRES_USER")
+	password := os.Getenv("POSTGRES_PASSWORD")
 
-func init() {
-	// 環境変数を取得する
-	host := os.Getenv("HOST")
-	database := os.Getenv("DATABASE")
-	user := os.Getenv("USER")
-	password := os.Getenv("PASSWORD")
-
-	// データベースに接続する
-	_, err := sql.Open("postgres", fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=disable", host, user, password, database))
+	db, err := sql.Open("postgres", fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=disable", host, user, password, database))
 	if err != nil {
 		panic(err)
 	}
 
-	// 後でマイグレーションのモジュールを作成する
-
-}
-
-func main() {
-
-	// 後でAPIエンドポイントのモジュールを作成する
+	migrations.UsersMigrate(db)
+	api.Users(db)
 
 	fmt.Println("Server is running on port 8080...")
 	http.ListenAndServe(":8080", nil)
